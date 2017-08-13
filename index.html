@@ -1,0 +1,34 @@
+<!DOCTYPE html >
+<html lang="en" ng-app="weather-app">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	
+	<link rel="stylesheet" href="main.css">
+	
+</head>
+<body>
+	
+<div id="main-container" ng-controller="weather-controller" >
+	<div class="view" style="background-image: url(img/{{icon}}.jpg)" ng-show="activeView">
+		<div class="shadow">
+			<h1>{{temperature}}°<span>C</span></h2>
+			<h2>{{description}}</h2>
+			<h3>{{city}}</h2>	
+		</div>	
+	</div>
+
+	<div class="view" id="errorView" style="background-color: blue;" ng-hide="activeView">
+		<div class="shadow">
+			<h1>Oops!</h2>
+		</div>	
+	</div>
+</div>
+
+
+<script src="angular.min.js"></script>
+
+	<script src="Weather.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
